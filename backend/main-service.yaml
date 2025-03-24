@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1 
 metadata: 
-  name: backend-blue
+  name: backend
   namespace: expense
 spec:
   selector: 
