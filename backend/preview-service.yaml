@@ -8,7 +8,7 @@ spec:
     project: expense
     app: backend
     tier: backend
-    version: green
+    version: blue
   ports:
   - protocol: TCP
     targetPort: 8080
