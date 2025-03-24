@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: backend-green
+  namespace: expense
+  labels: 
+    project: expense
+    app: backend
+    tier: backend
+    version: green
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      project: expense
+      app: backend
+      tier: backend
+      version: green
+  template:
+    metadata: 
+      labels: 
+        project: expense
+        app: backend
+        tier: backend
+        version: green
+    spec:
+      containers:
+      - name: backend
+        image: lakshman143/green:2.0
+        envFrom:
+        - configMapRef:
+            name: backend
+
+
