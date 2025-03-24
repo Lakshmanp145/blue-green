@@ -27,5 +27,8 @@ spec:
       containers:
       - name: backend
         image: lakshman143/blue:1.0
+        envFrom:
+        - configMapRef:
+            name: backend
 
 
